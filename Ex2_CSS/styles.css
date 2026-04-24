@@ -1,0 +1,404 @@
+/* General page style */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1f2937;
+  background-color: #fffaf4;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header and navigation bar */
+.site-header {
+  width: 100%;
+  padding: 24px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffaf4;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.nav-links a:hover {
+  color: #f97316;
+}
+
+/* Hero section - main opening area */
+.hero {
+  padding: 85px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/wave.webp");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.eyebrow,
+.section-label {
+  color: #f97316;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.hey-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hey-line h1 {
+  font-family: "Caveat Brush", cursive;
+  font-size: 6rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 24px;
+  color: #111827;
+}
+
+.hey-img {
+  width: 80%;
+  height: auto;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4b5563;
+  max-width: 660px;
+  margin: 0 auto 34px;
+}
+
+/* Buttons in the hero and contact sections */
+.hero-buttons,
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: 0.25s;
+  display: inline-block;
+}
+
+.primary-btn {
+  background-color: #111827;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* General section style */
+.section {
+  width: 84%;
+  max-width: 1150px;
+  margin: 85px auto;
+}
+
+.section h2 {
+  font-size: 2.9rem;
+  margin: 0 0 38px;
+  color: #111827;
+}
+
+/* Skills cards */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.help-card {
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(17, 24, 39, 0.06);
+  transition: 0.25s;
+}
+
+.help-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+}
+
+.help-card img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.help-card h3 {
+  margin: 10px 0;
+  color: #111827;
+}
+
+.help-card p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* Projects section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 28px;
+  padding: 28px;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(17, 24, 39, 0.06);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 22px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+  color: #111827;
+}
+
+.project-card p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+.project-content a {
+  color: #f97316;
+  font-weight: 800;
+}
+
+/* About me section */
+.about-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  text-align: left;
+  align-items: start;
+}
+
+.about-section h2 {
+  margin-bottom: 0;
+}
+
+.about-text {
+  font-size: 1.15rem;
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* Tools list */
+.tools-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tools-list span {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(17, 24, 39, 0.06);
+}
+
+/* Contact section */
+.contact-section {
+  background-color: white;
+  border-radius: 34px;
+  padding: 60px 30px;
+  box-shadow: 0 16px 45px rgba(17, 24, 39, 0.08);
+}
+
+.contact-section p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+.contact-section .contact-links {
+  margin-top: 28px;
+}
+
+/* Separator between sections */
+hr {
+  border: dotted #e5e7eb 7px;
+  border-bottom: none;
+  width: 45%;
+  margin: 30px auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #111827;
+  color: white;
+  padding: 34px 20px;
+  margin-top: 80px;
+}
+
+/* Responsive design for tablets and small screens */
+@media (max-width: 900px) {
+  .site-header {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 6%;
+    background-size: cover;
+  }
+
+  .hero-text {
+    max-width: 90%;
+  }
+
+  .hey-line {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hey-line h1 {
+    font-size: 4.3rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .help-grid,
+  .projects-grid,
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .about-section {
+    text-align: center;
+  }
+
+  .section {
+    width: 88%;
+    margin: 70px auto;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 520px) {
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: 0.8rem;
+  }
+
+  .hey-line h1 {
+    font-size: 3.3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .section {
+    width: 90%;
+    margin: 55px auto;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+
+  .help-card,
+  .project-card {
+    padding: 22px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .contact-section {
+    padding: 45px 22px;
+  }
+
+  hr {
+    width: 60%;
+  }
+}
