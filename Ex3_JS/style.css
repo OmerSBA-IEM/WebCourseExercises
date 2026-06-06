@@ -1,0 +1,268 @@
+:root {
+    --dark-green: #0d2f16;
+    --main-green: #2f6b2f;
+    --light-green: #9bd770;
+    --yellow: #ffd447;
+    --orange: #ff9f1c;
+    --white: #ffffff;
+    --black-shadow: rgba(0, 0, 0, 0.55);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    background-image:
+        linear-gradient(rgba(5, 35, 10, 0.35), rgba(5, 35, 10, 0.65)),
+        url("images/jungle-background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-header {
+    text-align: center;
+    padding: 28px 15px 15px;
+    text-shadow: 2px 3px 6px var(--black-shadow);
+}
+
+.main-header h1 {
+    font-size: 3.4rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.main-header p {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+}
+
+#musicButton {
+    padding: 12px 25px;
+    border: 3px solid var(--yellow);
+    border-radius: 30px;
+    background-color: rgba(13, 47, 22, 0.9);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    background-color: var(--yellow);
+    color: var(--dark-green);
+    transform: scale(1.08);
+}
+
+#musicButton:disabled {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.selected-box {
+    width: fit-content;
+    max-width: 90%;
+    margin: 10px auto 25px;
+    padding: 15px 30px;
+    text-align: center;
+    border: 2px solid var(--light-green);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.48);
+    box-shadow: 0 6px 16px var(--black-shadow);
+}
+
+.selected-box h2 {
+    color: var(--yellow);
+    margin-bottom: 6px;
+}
+
+.characters-area {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.character-card {
+    position: relative;
+    min-height: 245px;
+    padding: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.45);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 8px 18px var(--black-shadow);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: var(--yellow);
+    background-color: rgba(255, 212, 71, 0.18);
+}
+
+.character-card img {
+    width: 100%;
+    height: 155px;
+    object-fit: contain;
+    filter: drop-shadow(3px 7px 6px rgba(0, 0, 0, 0.7));
+    margin-bottom: 12px;
+}
+
+.character-card h3 {
+    color: var(--yellow);
+    font-size: 1.35rem;
+    margin-bottom: 5px;
+}
+
+.character-card p {
+    font-size: 0.95rem;
+}
+
+.key-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    color: var(--dark-green);
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 38px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--black-shadow);
+}
+
+.character-card.active {
+    border-color: var(--orange);
+    background-color: rgba(255, 159, 28, 0.25);
+    box-shadow:
+        0 0 20px var(--yellow),
+        0 0 35px var(--orange);
+    animation: selectedCharacter 0.5s ease;
+}
+
+@keyframes selectedCharacter {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.welcome-popup {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.welcome-content {
+    width: 90%;
+    max-width: 480px;
+    padding: 35px 28px;
+    text-align: center;
+    border: 3px solid var(--yellow);
+    border-radius: 25px;
+    background-color: rgba(13, 47, 22, 0.95);
+    box-shadow:
+        0 0 25px var(--yellow),
+        0 10px 25px var(--black-shadow);
+}
+
+.welcome-content h2 {
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+#welcomeButton {
+    padding: 12px 28px;
+    border: 3px solid var(--yellow);
+    border-radius: 30px;
+    background-color: var(--yellow);
+    color: var(--dark-green);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#welcomeButton:hover {
+    background-color: var(--orange);
+    transform: scale(1.08);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 900px) {
+    .characters-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-header h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Responsive design for phones */
+@media (max-width: 600px) {
+    .characters-area {
+        grid-template-columns: 1fr;
+        width: 88%;
+    }
+
+    .main-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-header p {
+        font-size: 0.95rem;
+    }
+
+    .character-card {
+        min-height: 220px;
+    }
+
+    .character-card img {
+        height: 135px;
+    }
+
+    .selected-box {
+        padding: 12px 18px;
+    }
+}

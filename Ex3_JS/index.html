@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omer's Jungle Book</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="welcomePopup" class="welcome-popup">
+        <div class="welcome-content">
+            <h2>Welcome to the Jungle!</h2>
+            <p>
+                If you do not like The Jungle Book, this might be a very long minute for you.
+            </p>
+
+            <button id="welcomeButton">
+                Let's go!
+            </button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" src="sounds/background.mp3"></audio>
+    <header class="main-header">
+        <h1>The Jungle Book</h1>
+
+        <p>
+            Click a character or press the matching keyboard key to hear its sound
+        </p>
+
+        <button id="musicButton">
+            Start Jungle Music
+        </button>
+    </header>
+
+    <main>
+        <section class="selected-box">
+            <h2 id="selectedCharacter">
+                Choose a character
+            </h2>
+
+            <p id="selectedText">
+                Press M, B, G, S, K, L, H or N
+            </p>
+        </section>
+
+        <section id="charactersArea" class="characters-area">
+            <!-- The characters will be created here by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © Omer Shahr - Ben Ami
+        </p>
+    </footer>
+</body>
+</html>
